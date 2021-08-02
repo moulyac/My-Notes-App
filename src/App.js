@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React,{ useState, useEffect } from 'react'
+import React,{ useEffect } from 'react'
 import Home from './components/Home'
 import { useDispatch } from 'react-redux'
 import { stateLogin } from './action/postmethod'
@@ -15,8 +15,7 @@ const App=()=>{
 
     return (
          <div className='app'>
-            {/* <NavBar/> */}
-
+           
             <Home/>
             
         </div>

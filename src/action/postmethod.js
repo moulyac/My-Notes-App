@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const postMethodRegister = (values)=>{
     return (dispatch)=>{
-    axios.post('http://dct-user-auth.herokuapp.com/users/register',values)
+    axios.post('https://dct-user-auth.herokuapp.com/users/register',values)
             .then((response)=>{
                 const result=(response.data)
                 if(result.hasOwnProperty('errors')){
@@ -28,7 +28,7 @@ export const stateRegister = (b)=>{
 
 export const postMethodLogin = (formData)=>{
     return (dispatch)=>{
-        axios.post('http://dct-user-auth.herokuapp.com/users/login',formData)
+        axios.post('https://dct-user-auth.herokuapp.com/users/login',formData)
             .then((response)=>{
                 const result=(response.data)
                 if(result.hasOwnProperty('errors')){//Object.keys(result).includes(errros)
@@ -57,7 +57,7 @@ export const stateLogin = (b)=>{
 
 export const notesPostMethod = (formData)=>{
     return (dispatch)=>{
-        axios.post('http://dct-user-auth.herokuapp.com/api/notes',formData,{
+        axios.post('https://dct-user-auth.herokuapp.com/api/notes',formData,{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }

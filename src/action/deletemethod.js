@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const deleteNote = (id)=>{
     return (dispatch)=>{
-        axios.delete(`http://dct-user-auth.herokuapp.com/api/notes/${id}`,{
+        axios.delete(`https://dct-user-auth.herokuapp.com/api/notes/${id}`,{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }

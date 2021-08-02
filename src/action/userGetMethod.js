@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const accountGetMethod = ()=>{
     return (dispatch)=>{
-        axios.get('http://dct-user-auth.herokuapp.com/users/account',{
+        axios.get('https://dct-user-auth.herokuapp.com/users/account',{
                 headers:{
                     'x-auth':localStorage.getItem('token')
                 }
@@ -31,7 +31,7 @@ export const userAccount = (result)=>{
 
 export const userNotesGet = ()=>{
     return (dispatch)=>{
-        axios.get('http://dct-user-auth.herokuapp.com/api/notes',{
+        axios.get('https://dct-user-auth.herokuapp.com/api/notes',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }
